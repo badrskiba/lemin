@@ -6,7 +6,7 @@
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/10 14:28:36 by bskiba            #+#    #+#             */
-/*   Updated: 2017/05/10 14:28:46 by bskiba           ###   ########.fr       */
+/*   Updated: 2017/05/22 15:42:02 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ t_code			*get_code(t_code *code)
 	char		*line;
 
 	line = NULL;
-	while (get_next_line(0, &line))
+	while (get_next_line(0, &line) > 0)
 	{
 		if ((code = new_code_line(NULL, line, code)) == NULL)
 			return (NULL);

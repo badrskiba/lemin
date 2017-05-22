@@ -6,7 +6,7 @@
 /*   By: bskiba <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/10 14:23:44 by bskiba            #+#    #+#             */
-/*   Updated: 2017/05/10 16:05:40 by bskiba           ###   ########.fr       */
+/*   Updated: 2017/05/22 15:46:18 by bskiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void		ft_affich_round(t_lemin *lemin)
 	while (lemin->path->next)
 	{
 		if (lemin->path->ants != 0)
-			ft_printf("L%d-%s", lemin->path->ants, lemin->path->next->path);
+			ft_printf("L%d-%s ", lemin->path->ants, lemin->path->next->path);
 		lemin->path = lemin->path->next;
 	}
 	ft_printf("\n");
@@ -40,7 +40,7 @@ void		ft_affich_round_fin(t_lemin *lemin, int max_ants)
 	while (lemin->path->next)
 	{
 		if (lemin->path->ants <= max_ants)
-			ft_printf("L%d-%s", lemin->path->ants, lemin->path->next->path);
+			ft_printf("L%d-%s ", lemin->path->ants, lemin->path->next->path);
 		lemin->path = lemin->path->next;
 	}
 	lemin->path = tmp->path;
